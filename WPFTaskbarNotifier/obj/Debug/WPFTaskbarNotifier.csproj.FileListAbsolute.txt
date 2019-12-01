@@ -1,0 +1,20 @@
+C:\Users\mtaft\Downloads\WPF Taskbar\WPFTaskbarNotifier\bin\Debug\WPFTaskbarNotifier.dll
+C:\Users\mtaft\Downloads\WPF Taskbar\WPFTaskbarNotifier\bin\Debug\WPFTaskbarNotifier.pdb
+C:\Users\mtaft\Downloads\WPF Taskbar\WPFTaskbarNotifier\obj\Debug\WPFTaskbarNotifier.csprojAssemblyReference.cache
+C:\Users\mtaft\Downloads\WPF Taskbar\WPFTaskbarNotifier\obj\Debug\WPFTaskbarNotifier.Properties.Resources.resources
+C:\Users\mtaft\Downloads\WPF Taskbar\WPFTaskbarNotifier\obj\Debug\WPFTaskbarNotifier.csproj.GenerateResource.cache
+C:\Users\mtaft\Downloads\WPF Taskbar\WPFTaskbarNotifier\obj\Debug\WPFTaskbarNotifier.dll
+C:\Users\mtaft\Downloads\WPF Taskbar\WPFTaskbarNotifier\obj\Debug\WPFTaskbarNotifier.pdb
+C:\Users\mtaft\Downloads\WPF Taskbar\WPFTaskbarNotifier\bin\Debug\Newtonsoft.Json.dll
+C:\Users\mtaft\Downloads\WPF Taskbar\WPFTaskbarNotifier\bin\Debug\Newtonsoft.Json.xml
+C:\Users\mtaft\Downloads\WPF Taskbar\WPFTaskbarNotifier\obj\Debug\WPFTaskbarNotifier.csproj.CopyComplete
+C:\Users\mtaft\Downloads\Compressed\WPF-Taskbar-master\WPFTaskbarNotifier\bin\Debug\WPFTaskbarNotifier.dll
+C:\Users\mtaft\Downloads\Compressed\WPF-Taskbar-master\WPFTaskbarNotifier\bin\Debug\WPFTaskbarNotifier.pdb
+C:\Users\mtaft\Downloads\Compressed\WPF-Taskbar-master\WPFTaskbarNotifier\bin\Debug\Newtonsoft.Json.dll
+C:\Users\mtaft\Downloads\Compressed\WPF-Taskbar-master\WPFTaskbarNotifier\bin\Debug\Newtonsoft.Json.xml
+C:\Users\mtaft\Downloads\Compressed\WPF-Taskbar-master\WPFTaskbarNotifier\obj\Debug\WPFTaskbarNotifier.csprojAssemblyReference.cache
+C:\Users\mtaft\Downloads\Compressed\WPF-Taskbar-master\WPFTaskbarNotifier\obj\Debug\WPFTaskbarNotifier.Properties.Resources.resources
+C:\Users\mtaft\Downloads\Compressed\WPF-Taskbar-master\WPFTaskbarNotifier\obj\Debug\WPFTaskbarNotifier.csproj.GenerateResource.cache
+C:\Users\mtaft\Downloads\Compressed\WPF-Taskbar-master\WPFTaskbarNotifier\obj\Debug\WPFTaskbarNotifier.csproj.CopyComplete
+C:\Users\mtaft\Downloads\Compressed\WPF-Taskbar-master\WPFTaskbarNotifier\obj\Debug\WPFTaskbarNotifier.dll
+C:\Users\mtaft\Downloads\Compressed\WPF-Taskbar-master\WPFTaskbarNotifier\obj\Debug\WPFTaskbarNotifier.pdb
