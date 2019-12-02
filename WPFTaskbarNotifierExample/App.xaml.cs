@@ -31,6 +31,7 @@ namespace WPFTaskbarNotifierExample
             _runningTask = _service.RunAsync(window, _cts.Token);
 
             // show window
+            window.Topmost = true;
             window.Show();
 
             //return Task.CompletedTask;

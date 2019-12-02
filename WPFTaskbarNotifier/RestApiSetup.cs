@@ -50,7 +50,7 @@ namespace WPFTaskbarNotifier
                 var result = JObject.Parse(value.ToString());
                 var model = new NotificationItem()
                 {
-                    Count = result["count"].ToString() as string
+                    Count = result["jumlah"].ToString() as string
                 };
                 list.Add(model);
             }
