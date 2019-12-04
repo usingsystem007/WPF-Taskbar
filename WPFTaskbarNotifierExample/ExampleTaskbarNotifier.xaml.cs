@@ -21,7 +21,6 @@ namespace WPFTaskbarNotifierExample
 {
     public partial class ExampleTaskbarNotifier : INotificationHandler
     {
-        private string Text;
         private System.Windows.Forms.NotifyIcon notifyIcon1;
         private System.Windows.Forms.ContextMenu contextMenu1;
         private System.Windows.Forms.MenuItem exitMenu;
@@ -79,7 +78,14 @@ namespace WPFTaskbarNotifierExample
 
         private void openMenu_Click(object Sender, EventArgs e)
         {
-            this.Show();
+            //this.Show();
+            if (_notifications != null) {
+                foreach (var notification in _notifications) {
+                    NotifyContent.Clear(); // <------------- Menghapus tumpkan
+                    NotifyContent.Add(notification);
+                }
+            }
+            Notify();
         }
 
         private void exitMenu_Click(object Sender, EventArgs e)
@@ -100,13 +106,17 @@ namespace WPFTaskbarNotifierExample
 
         public ObservableCollection<NotificationItem> NotifyContent { get; } = new ObservableCollection<NotificationItem>();
 
+        private IEnumerable<NotificationItem> _notifications;
+
         public void OnNewNotifications(IEnumerable<NotificationItem> notifications)
         {
             //throw new NotImplementedException();
-
+            _notifications = notifications;
             foreach (var notification in notifications) 
             {
+                NotifyContent.Clear(); // <------------- Menghapus tumpkan
                 NotifyContent.Add(notification);
+                //Console.WriteLine(notification.Jumlah);
             }
 
             Notify();

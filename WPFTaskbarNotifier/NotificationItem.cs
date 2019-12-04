@@ -10,6 +10,6 @@ namespace WPFTaskbarNotifier
     {
         public string Nama { get; set; }
         public string Company { get; set; }
-        public string Count { get; set; }
+        public string Jumlah { get; set; }
     }
 }

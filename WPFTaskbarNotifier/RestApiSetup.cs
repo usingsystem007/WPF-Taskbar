@@ -33,24 +33,8 @@ namespace WPFTaskbarNotifier
                 var model = new NotificationItem()
                 {
                     Nama = result["first_name"].ToString() as string,
-                    Company = result["company"].ToString() as string
-                };
-                list.Add(model);
-            }
-            return list;
-        }
-
-        public async Task<IEnumerable<NotificationItem>> CountData(string url)
-        {
-            var list = new List<NotificationItem>();
-            var task = await CountDataAsync(url);
-
-            foreach (var value in Queue)
-            {
-                var result = JObject.Parse(value.ToString());
-                var model = new NotificationItem()
-                {
-                    Count = result["jumlah"].ToString() as string
+                    Company = result["company"].ToString() as string,
+                    Jumlah = result["Jumlah"].ToString() as string
                 };
                 list.Add(model);
             }
@@ -108,36 +92,13 @@ namespace WPFTaskbarNotifier
                     Queue = json;
                     foreach (var value in json)
                     {
+                        Console.WriteLine(api);
                         var result = JObject.Parse(value.ToString());
                         var model = new NotificationItem()
                         {
                             Nama = result["first_name"].ToString() as string,
-                            Company = result["company"].ToString() as string
-                        };
-                        list.Add(model);
-                    }
-                }
-                catch { }
-            }
-            return list;
-        }
-
-        public async Task<IEnumerable<NotificationItem>> CountDataAsync(string url)
-        {
-            var list = new List<NotificationItem>();
-            using (var client = new HttpClient())
-            {
-                try
-                {
-                    var api = await client.GetStringAsync(url);
-                    var json = JArray.Parse(api);
-                    Queue = json;
-                    foreach (var value in json)
-                    {
-                        var result = JObject.Parse(value.ToString());
-                        var model = new NotificationItem()
-                        {
-                            Count = result["Jumlah"].ToString() as string
+                            Company = result["company"].ToString() as string,
+                            Jumlah = result["Jumlah"].ToString() as string
                         };
                         list.Add(model);
                     }
