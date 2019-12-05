@@ -80,8 +80,10 @@ namespace WPFTaskbarNotifierExample
         {
             //this.Show();
             if (_notifications != null) {
+                // Menghapus tumpkan
+                NotifyContent.Clear();
+
                 foreach (var notification in _notifications) {
-                    NotifyContent.Clear(); // <------------- Menghapus tumpkan
                     NotifyContent.Add(notification);
                 }
             }
@@ -110,13 +112,13 @@ namespace WPFTaskbarNotifierExample
 
         public void OnNewNotifications(IEnumerable<NotificationItem> notifications)
         {
-            //throw new NotImplementedException();
+            // Menghapus tumpkan
+            NotifyContent.Clear();
+
             _notifications = notifications;
             foreach (var notification in notifications) 
-            {
-                NotifyContent.Clear(); // <------------- Menghapus tumpkan
+            {                
                 NotifyContent.Add(notification);
-                //Console.WriteLine(notification.Jumlah);
             }
 
             Notify();

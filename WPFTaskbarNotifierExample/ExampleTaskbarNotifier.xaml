@@ -41,7 +41,7 @@
                     <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
                 <StackPanel Grid.Column="0" Margin="0,5,0,0" VerticalAlignment="Top" Orientation="Horizontal">
-                    <TextBlock  Text="Status : " />
+                    <TextBlock Text="Status : " />
                 </StackPanel>
                 <Label Grid.Column="1"  Margin="0,-1,0,0" HorizontalAlignment="Left" ToolTip="Click to open">
                     <TextBlock>
@@ -141,16 +141,47 @@
                             </LinearGradientBrush>
                         </Path.Stroke>
                     </Path>
+
                     <Button x:Name="button" Content="Show" Click="Show_Click" HorizontalAlignment="Left" Height="21" Margin="101,6,0,-22" Grid.Row="4" VerticalAlignment="Top" Width="75" FontWeight="Bold"/>
+
                     <ItemsControl x:Name="Status"  BorderThickness="0"
-                       ItemsSource="{Binding NotifyContent, ElementName=ThisControl}"
-                       ItemTemplate="{StaticResource StatusTemplate}" Margin="0,6,0,5" Grid.Row="1" >
-                        <ItemsControl.ItemsPanel>
-                            <ItemsPanelTemplate>
-                                <StackPanel Orientation="Vertical" Width="Auto"/>
-                            </ItemsPanelTemplate>
-                        </ItemsControl.ItemsPanel>
-                    </ItemsControl>
+                        ItemsSource="{Binding NotifyContent, ElementName=ThisControl}"
+                        ItemTemplate="{StaticResource StatusTemplate}" Margin="0,6,0,5" Grid.Row="1" >
+                            <ItemsControl.ItemsPanel>
+                                <ItemsPanelTemplate>
+                                    <StackPanel Orientation="Vertical" Width="Auto"/>
+                                </ItemsPanelTemplate>
+                            </ItemsControl.ItemsPanel>
+                        </ItemsControl>
+
+                    <!--<ItemsControl x:Name="Status" Margin="0,6,0,5" ItemsSource="{Binding NotifyContent, ElementName=ThisControl}" ItemTemplate="{StaticResource StatusTemplate}" BorderThickness="0" Grid.Row="1">
+                        <ItemsControl.ItemContainerStyle>
+                            <Style TargetType="ContentPresenter">
+                                <Setter Property="ContentTemplate">
+                                    <Setter.Value>
+                                        <DataTemplate>
+                                            <ContentControl Content="{Binding}">
+                                                <ContentControl.Style>
+                                                    <Style TargetType="ContentControl">
+                                                        <Style.Triggers>
+                                                            <DataTrigger Binding="{Binding Jumlah}" Value="True">
+                                                                <Setter Property="ContentTemplate"
+                                    Value="{StaticResource StatusTemplate}" />
+                                                            </DataTrigger>
+                                                            <DataTrigger Binding="{Binding Jumlah}" Value="Fasle">
+                                                                <Setter Property="ContentTemplate"
+                                    Value="{StaticResource StatusTemplate}" />
+                                                            </DataTrigger>
+                                                        </Style.Triggers>
+                                                    </Style>
+                                                </ContentControl.Style>
+                                            </ContentControl>
+                                        </DataTemplate>
+                                    </Setter.Value>
+                                </Setter>
+                            </Style>
+                        </ItemsControl.ItemContainerStyle>
+                    </ItemsControl>-->
 
                 </Grid>
 

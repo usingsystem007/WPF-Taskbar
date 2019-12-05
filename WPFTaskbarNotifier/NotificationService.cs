@@ -16,13 +16,16 @@ namespace WPFTaskbarNotifier
             while (!token.IsCancellationRequested)
             {
                 // get notifications
-                var notifications = await GetNotificationsAsync();
+                var hitung = await GetCountAsync();
 
-                foreach (var data in notifications) {
+                foreach (var data in hitung) {
                     if (count != Convert.ToDouble(data.Jumlah))
                     {
+                        // get notifications
+                        var notification = await GetNotificationsAsync();
+
                         // notify handler
-                        handler.OnNewNotifications(notifications);
+                        handler.OnNewNotifications(notification);
 
                         // wait for 10 seconds
                         await Task.Delay(TimeSpan.FromSeconds(1));
@@ -44,9 +47,10 @@ namespace WPFTaskbarNotifier
             return api.LoadDataAsync(@"http://localhost/Client-side/pengajuan/");
         }
 
-        //private Task<IEnumerable<NotificationItem>> GetCountAsync()
-        //{
-        //    return api.CountDataAsync(@"http://localhost/Client-side/pengajuan/count");
-        //}
+        private Task<IEnumerable<NotificationItem>> GetCountAsync()
+        {
+            // get count from server
+            return api.CountDataAsync(@"http://localhost/Client-side/pengajuan/count/");
+        }
     }
 }
